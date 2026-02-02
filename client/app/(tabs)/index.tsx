@@ -42,8 +42,8 @@ export default function App() {
   const [activity, setActivity] = useState('1.2'); // 1.2 = Сидячий
   const [goal, setGoal] = useState('lose'); // lose = Сушка
 
-  // 👇 ТВОЯ ССЫЛКА (DevTunnels)
-  const BASE_URL = 'https://hn8j0kqp-5000.euw.devtunnels.ms'; 
+  // 👇 ТВОЙ ЛОКАЛЬНЫЙ АДРЕС (Взял из ipconfig "Ethernet Home")
+  const BASE_URL = 'http://192.168.0.102:5000'; 
 
   // --- 1. АВТОРИЗАЦИЯ ---
   const handleAuth = async () => {
@@ -66,7 +66,7 @@ export default function App() {
       } else {
         Alert.alert('Ошибка', data.message);
       }
-    } catch (error) { Alert.alert('Ошибка сети', 'Проверь сервер'); }
+    } catch (error) { Alert.alert('Ошибка сети', 'Проверь сервер и IP'); }
   };
 
   // --- 2. СОХРАНЕНИЕ АНКЕТЫ ---
